@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		20BE0D202B931E5A00E7A6ED /* omgApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BE0D1F2B931E5A00E7A6ED /* omgApp.swift */; };
+		20BE0D202B931E5A00E7A6ED /* OMGApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BE0D1F2B931E5A00E7A6ED /* OMGApp.swift */; };
 		20BE0D222B931E5A00E7A6ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BE0D212B931E5A00E7A6ED /* ContentView.swift */; };
 		20BE0D242B931E5C00E7A6ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BE0D232B931E5C00E7A6ED /* Assets.xcassets */; };
 		20BE0D272B931E5C00E7A6ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BE0D262B931E5C00E7A6ED /* Preview Assets.xcassets */; };
+		20BE0D2E2B93300400E7A6ED /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BE0D2D2B93300400E7A6ED /* ContentViewModel.swift */; };
+		20BE0D372B93397E00E7A6ED /* VerticalListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BE0D362B93397E00E7A6ED /* VerticalListRowView.swift */; };
+		20BE0D392B9339DF00E7A6ED /* VerticalListRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BE0D382B9339DF00E7A6ED /* VerticalListRowViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		20BE0D1C2B931E5A00E7A6ED /* omg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = omg.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		20BE0D1F2B931E5A00E7A6ED /* omgApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = omgApp.swift; sourceTree = "<group>"; };
+		20BE0D1F2B931E5A00E7A6ED /* OMGApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMGApp.swift; sourceTree = "<group>"; };
 		20BE0D212B931E5A00E7A6ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		20BE0D232B931E5C00E7A6ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20BE0D262B931E5C00E7A6ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		20BE0D2D2B93300400E7A6ED /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		20BE0D362B93397E00E7A6ED /* VerticalListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalListRowView.swift; sourceTree = "<group>"; };
+		20BE0D382B9339DF00E7A6ED /* VerticalListRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalListRowViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +57,10 @@
 		20BE0D1E2B931E5A00E7A6ED /* omg */ = {
 			isa = PBXGroup;
 			children = (
-				20BE0D1F2B931E5A00E7A6ED /* omgApp.swift */,
-				20BE0D212B931E5A00E7A6ED /* ContentView.swift */,
-				20BE0D232B931E5C00E7A6ED /* Assets.xcassets */,
+				20BE0D322B93386900E7A6ED /* Resources */,
+				20BE0D312B93385900E7A6ED /* Library */,
+				20BE0D302B93384900E7A6ED /* Configuration */,
+				20BE0D2F2B93383200E7A6ED /* Application */,
 				20BE0D252B931E5C00E7A6ED /* Preview Content */,
 			);
 			path = omg;
@@ -67,6 +74,64 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		20BE0D2F2B93383200E7A6ED /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				20BE0D1F2B931E5A00E7A6ED /* OMGApp.swift */,
+				20BE0D332B9338E900E7A6ED /* UI */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		20BE0D302B93384900E7A6ED /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		20BE0D312B93385900E7A6ED /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		20BE0D322B93386900E7A6ED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				20BE0D232B931E5C00E7A6ED /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		20BE0D332B9338E900E7A6ED /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				20BE0D352B93395A00E7A6ED /* VerticalListRow */,
+				20BE0D342B93391500E7A6ED /* Content */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		20BE0D342B93391500E7A6ED /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				20BE0D2D2B93300400E7A6ED /* ContentViewModel.swift */,
+				20BE0D212B931E5A00E7A6ED /* ContentView.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		20BE0D352B93395A00E7A6ED /* VerticalListRow */ = {
+			isa = PBXGroup;
+			children = (
+				20BE0D362B93397E00E7A6ED /* VerticalListRowView.swift */,
+				20BE0D382B9339DF00E7A6ED /* VerticalListRowViewModel.swift */,
+			);
+			path = VerticalListRow;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +142,7 @@
 				20BE0D182B931E5A00E7A6ED /* Sources */,
 				20BE0D192B931E5A00E7A6ED /* Frameworks */,
 				20BE0D1A2B931E5A00E7A6ED /* Resources */,
+				20BE0D3A2B933B6800E7A6ED /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -132,13 +198,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		20BE0D3A2B933B6800E7A6ED /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		20BE0D182B931E5A00E7A6ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				20BE0D222B931E5A00E7A6ED /* ContentView.swift in Sources */,
-				20BE0D202B931E5A00E7A6ED /* omgApp.swift in Sources */,
+				20BE0D372B93397E00E7A6ED /* VerticalListRowView.swift in Sources */,
+				20BE0D202B931E5A00E7A6ED /* OMGApp.swift in Sources */,
+				20BE0D392B9339DF00E7A6ED /* VerticalListRowViewModel.swift in Sources */,
+				20BE0D2E2B93300400E7A6ED /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,12 +363,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"omg/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -286,9 +376,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = omg.omg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -301,12 +395,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"omg/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,9 +408,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = omg.omg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
