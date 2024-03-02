@@ -9,5 +9,5 @@ import Foundation
 
 struct ListRowConstants {
     static let title = "OMG"
-    static let rowHeight: CGFloat = 80
+    static let rowHeight: CGFloat = 180
 }

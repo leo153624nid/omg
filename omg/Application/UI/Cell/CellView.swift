@@ -20,7 +20,7 @@ struct CellView: View {
     init(
         viewModel: Cell,
         width: CGFloat = 100,
-        height: CGFloat = 40,
+        height: CGFloat = 120,
         color: Color = .blue
     ) {
         self.viewModel = viewModel
@@ -38,7 +38,7 @@ struct CellView: View {
         }
         .frame(width: width, height: height)
         .scaleEffect(isTapped ? 0.8 : 1)
-        .animation(.linear(duration: 0.5), value: isTapped)
+        .animation(.linear(duration: 0.3), value: isTapped)
         .overlay(SpecialTapGestureView(
             onLongTapped: { isTapped = true },
             onEnded: { isTapped = false }

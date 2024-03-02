@@ -9,42 +9,24 @@ import Combine
 import Foundation
 
 final class ContentViewModel: ObservableObject {
-    @Published var data: [Row] = [
-        Row(value: [
-            Cell(value: 1),
-            Cell(value: 2),
-            Cell(value: 3),
-            Cell(value: 4),
-            Cell(value: 5),
-            Cell(value: 6),
-            Cell(value: 7),
-            Cell(value: 8),
-            Cell(value: 9),
-            Cell(value: 10)
-        ]),
-        Row(value: [
-            Cell(value: 1),
-            Cell(value: 2),
-            Cell(value: 3),
-            Cell(value: 4),
-            Cell(value: 5),
-            Cell(value: 6),
-            Cell(value: 7),
-            Cell(value: 8),
-            Cell(value: 9),
-            Cell(value: 10)
-        ]),
-        Row(value: [
-            Cell(value: 1),
-            Cell(value: 2),
-            Cell(value: 3),
-            Cell(value: 4),
-            Cell(value: 5),
-            Cell(value: 6),
-            Cell(value: 7),
-            Cell(value: 8),
-            Cell(value: 9),
-            Cell(value: 10)
-        ])
-    ]
+    @Published var data: [Row] = []
+    
+    private let rowCount = Int.random(in: 100..<150)
+    private var randomInt: Int {
+        Int.random(in: 10..<20)
+    }
+    
+    init() {
+        self.data = getRowArray(with: rowCount)
+    }
+    
+    private func getRowArray(with count: Int) -> [Row] {
+        return (0..<count).map { _ in
+            Row(value: getCellArray(with: randomInt))
+        }
+    }
+    
+    private func getCellArray(with count: Int) -> [Cell] {
+        return (0..<count).map { _ in Cell(value: randomInt) }
+    }
 }

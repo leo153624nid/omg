@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct ColorHelper {
-    func getColor(by str: String) -> Color {
+    static func getColor(by str: String) -> Color {
         let hash = getBkdrHash(string: str)
         let hsl = getHslFromHash(hash: hash)
         
@@ -21,7 +21,7 @@ struct ColorHelper {
         )
     }
     
-    private func getBkdrHash(string: String) -> Int64 {
+    static private func getBkdrHash(string: String) -> Int64 {
         var hash: Int64 = 0
         let seed1: Int64 = 131
         let seed2: Int64 = 137
@@ -38,7 +38,7 @@ struct ColorHelper {
         return hash
     }
     
-    private func getHslFromHash(hash: Int64) -> (hue: Double, saturation: Double, lightness: Double) {
+    static private func getHslFromHash(hash: Int64) -> (hue: Double, saturation: Double, lightness: Double) {
         let lightness: [Double] = [0.35, 0.5, 0.65]
         let saturation: [Double] = [0.35, 0.5, 0.65]
         

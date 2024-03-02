@@ -26,7 +26,7 @@ struct ContentView: View {
     private var listView: some View {
         List {
             ForEach(viewModel.data) { row in
-                VerticalListRowView(viewModel: .init(row: row))
+                VerticalListRowView(row: row)
                     .frame(height: rowHeight)
             }
             .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
