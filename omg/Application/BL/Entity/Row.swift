@@ -9,10 +9,10 @@ import Foundation
 
 struct Row: Identifiable {
     let id = UUID().uuidString
-    let value: [Cell]
+    var value: [Cell]
 }
 
 struct Cell: Identifiable {
     let id = UUID().uuidString
-    let value: Int
+    var value: Int
 }
