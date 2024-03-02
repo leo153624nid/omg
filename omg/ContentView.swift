@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  omg
 //
-//  Created by Andrey Buksha2 on 02.03.2024.
+//  Created by Aleksey Chaykin on 02.03.2024.
 //
 
 import SwiftUI
