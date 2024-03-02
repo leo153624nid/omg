@@ -10,9 +10,12 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var viewModel: ContentViewModel
     
+    private let rowHeight: CGFloat = ListRowConstants.rowHeight
+    
     var body: some View {
-        VStack {
-            Text("OMG")
+        VStack(spacing: 0) {
+            Text(ListRowConstants.title)
+                .padding(.all, 5)
             
             Divider()
             
@@ -22,8 +25,9 @@ struct ContentView: View {
     
     private var listView: some View {
         List {
-            ForEach(viewModel.data, id: \.hashValue) { item in
-                VerticalListRowView(viewModel: .init(item: item))
+            ForEach(viewModel.data) { row in
+                VerticalListRowView(viewModel: .init(row: row))
+                    .frame(height: rowHeight)
             }
             .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             .listRowSeparator(.hidden)

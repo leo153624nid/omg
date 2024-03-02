@@ -11,19 +11,26 @@ import SwiftUI
 struct VerticalListRowView: View {
     @ObservedObject var viewModel: VerticalListRowViewModel
     
+    private let colorHelper = ColorHelper()
+    
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            Text(viewModel.item.description)
-                .padding(.all, 10)
-                .background(.red)
-            
-            Divider()
+        ScrollView(.horizontal) {
+            LazyHStack {
+                ForEach(1..<10) {
+                    let item = viewModel.row.value[$0]
+                    
+                    CellView(
+                        viewModel: item,
+                        color: colorHelper.getColor(by: item.id)
+                    )
+                }
+            }
         }
-        .frame(maxWidth: .infinity)
-        .frame(height: 80)
+        .padding(.horizontal, 10)
+        .background(colorHelper.getColor(by: viewModel.row.id))
     }
 }
 
 #Preview {
-    VerticalListRowView(viewModel: .init(item: 1))
+    VerticalListRowView(viewModel: .init(row: .init(value: [])))
 }

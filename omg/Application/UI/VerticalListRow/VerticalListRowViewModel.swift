@@ -9,9 +9,9 @@ import Combine
 import Foundation
 
 final class VerticalListRowViewModel: ObservableObject {
-    @Published var item: Int
+    @Published var row: Row
     
-    init(item: Int) {
-        self.item = item
+    init(row: Row) {
+        self.row = row
     }
 }

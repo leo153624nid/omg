@@ -9,7 +9,42 @@ import Combine
 import Foundation
 
 final class ContentViewModel: ObservableObject {
-    @Published var data: [Int] = [
-        1, 2, 3, 4, 5
+    @Published var data: [Row] = [
+        Row(value: [
+            Cell(value: 1),
+            Cell(value: 2),
+            Cell(value: 3),
+            Cell(value: 4),
+            Cell(value: 5),
+            Cell(value: 6),
+            Cell(value: 7),
+            Cell(value: 8),
+            Cell(value: 9),
+            Cell(value: 10)
+        ]),
+        Row(value: [
+            Cell(value: 1),
+            Cell(value: 2),
+            Cell(value: 3),
+            Cell(value: 4),
+            Cell(value: 5),
+            Cell(value: 6),
+            Cell(value: 7),
+            Cell(value: 8),
+            Cell(value: 9),
+            Cell(value: 10)
+        ]),
+        Row(value: [
+            Cell(value: 1),
+            Cell(value: 2),
+            Cell(value: 3),
+            Cell(value: 4),
+            Cell(value: 5),
+            Cell(value: 6),
+            Cell(value: 7),
+            Cell(value: 8),
+            Cell(value: 9),
+            Cell(value: 10)
+        ])
     ]
 }

@@ -14,6 +14,11 @@
 		20BE0D2E2B93300400E7A6ED /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BE0D2D2B93300400E7A6ED /* ContentViewModel.swift */; };
 		20BE0D372B93397E00E7A6ED /* VerticalListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BE0D362B93397E00E7A6ED /* VerticalListRowView.swift */; };
 		20BE0D392B9339DF00E7A6ED /* VerticalListRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BE0D382B9339DF00E7A6ED /* VerticalListRowViewModel.swift */; };
+		20BE0D3D2B93648100E7A6ED /* SpecialTapGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BE0D3C2B93648100E7A6ED /* SpecialTapGestureView.swift */; };
+		20BE0D412B93656F00E7A6ED /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BE0D402B93656F00E7A6ED /* Row.swift */; };
+		20BE0D432B93663C00E7A6ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BE0D422B93663C00E7A6ED /* Constants.swift */; };
+		20BE0D462B93681700E7A6ED /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BE0D452B93681700E7A6ED /* CellView.swift */; };
+		20BE0D492B93698B00E7A6ED /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BE0D482B93698B00E7A6ED /* ColorHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,11 @@
 		20BE0D2D2B93300400E7A6ED /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		20BE0D362B93397E00E7A6ED /* VerticalListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalListRowView.swift; sourceTree = "<group>"; };
 		20BE0D382B9339DF00E7A6ED /* VerticalListRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalListRowViewModel.swift; sourceTree = "<group>"; };
+		20BE0D3C2B93648100E7A6ED /* SpecialTapGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialTapGestureView.swift; sourceTree = "<group>"; };
+		20BE0D402B93656F00E7A6ED /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
+		20BE0D422B93663C00E7A6ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		20BE0D452B93681700E7A6ED /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		20BE0D482B93698B00E7A6ED /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +87,7 @@
 		20BE0D2F2B93383200E7A6ED /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				20BE0D3F2B93655300E7A6ED /* BL */,
 				20BE0D1F2B931E5A00E7A6ED /* OMGApp.swift */,
 				20BE0D332B9338E900E7A6ED /* UI */,
 			);
@@ -93,6 +104,8 @@
 		20BE0D312B93385900E7A6ED /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				20BE0D3B2B93646F00E7A6ED /* SwiftUI */,
+				20BE0D422B93663C00E7A6ED /* Constants.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -108,6 +121,8 @@
 		20BE0D332B9338E900E7A6ED /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				20BE0D472B93697D00E7A6ED /* Utils */,
+				20BE0D442B93680A00E7A6ED /* Cell */,
 				20BE0D352B93395A00E7A6ED /* VerticalListRow */,
 				20BE0D342B93391500E7A6ED /* Content */,
 			);
@@ -130,6 +145,46 @@
 				20BE0D382B9339DF00E7A6ED /* VerticalListRowViewModel.swift */,
 			);
 			path = VerticalListRow;
+			sourceTree = "<group>";
+		};
+		20BE0D3B2B93646F00E7A6ED /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				20BE0D3C2B93648100E7A6ED /* SpecialTapGestureView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		20BE0D3E2B93653500E7A6ED /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				20BE0D402B93656F00E7A6ED /* Row.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		20BE0D3F2B93655300E7A6ED /* BL */ = {
+			isa = PBXGroup;
+			children = (
+				20BE0D3E2B93653500E7A6ED /* Entity */,
+			);
+			path = BL;
+			sourceTree = "<group>";
+		};
+		20BE0D442B93680A00E7A6ED /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				20BE0D452B93681700E7A6ED /* CellView.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		20BE0D472B93697D00E7A6ED /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				20BE0D482B93698B00E7A6ED /* ColorHelper.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,10 +280,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				20BE0D222B931E5A00E7A6ED /* ContentView.swift in Sources */,
+				20BE0D492B93698B00E7A6ED /* ColorHelper.swift in Sources */,
 				20BE0D372B93397E00E7A6ED /* VerticalListRowView.swift in Sources */,
+				20BE0D3D2B93648100E7A6ED /* SpecialTapGestureView.swift in Sources */,
 				20BE0D202B931E5A00E7A6ED /* OMGApp.swift in Sources */,
 				20BE0D392B9339DF00E7A6ED /* VerticalListRowViewModel.swift in Sources */,
+				20BE0D412B93656F00E7A6ED /* Row.swift in Sources */,
 				20BE0D2E2B93300400E7A6ED /* ContentViewModel.swift in Sources */,
+				20BE0D432B93663C00E7A6ED /* Constants.swift in Sources */,
+				20BE0D462B93681700E7A6ED /* CellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
