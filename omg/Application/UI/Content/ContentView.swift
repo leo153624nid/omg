@@ -19,6 +19,10 @@ struct ContentView: View {
             
             Divider()
             
+            CPUWheel()
+                .frame(height: 100)
+                .padding(.all, 5)
+            
             listView
         }
     }

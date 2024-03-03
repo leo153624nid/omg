@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct CellView: View {
-    private let viewModel: Cell
+    @ObservedObject var viewModel: Cell
     
     private let width: CGFloat
     private let height: CGFloat

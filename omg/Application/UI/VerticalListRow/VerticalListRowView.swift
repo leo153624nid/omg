@@ -9,16 +9,16 @@ import Foundation
 import SwiftUI
 
 struct VerticalListRowView: View {
-    private let viewModel: Row
+    @ObservedObject var viewModel: VerticalListRowViewModel
     
     init(row: Row) {
-        self.viewModel = row
+        self.viewModel = .init(row: row)
     }
     
     var body: some View {
         ScrollView(.horizontal) {
             LazyHStack {
-                ForEach(viewModel.value) { cell in
+                ForEach(viewModel.row.value) { cell in
                     CellView(
                         viewModel: cell,
                         color: ColorHelper.getColor(by: cell.id)
@@ -27,7 +27,13 @@ struct VerticalListRowView: View {
             }
         }
         .padding(.horizontal, 10)
-        .background(ColorHelper.getColor(by: viewModel.id))
+        .background(ColorHelper.getColor(by: viewModel.row.id))
+        .onAppear {
+            viewModel.startTimer()
+        }
+        .onDisappear {
+            viewModel.dismissTimer()
+        }
     }
 }
 

@@ -11,8 +11,3 @@ struct Row: Identifiable {
     let id = UUID().uuidString
     var value: [Cell]
 }
-
-struct Cell: Identifiable {
-    let id = UUID().uuidString
-    var value: Int
-}
